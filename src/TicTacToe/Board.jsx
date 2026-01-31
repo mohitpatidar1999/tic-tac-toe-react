@@ -1,5 +1,6 @@
 import Square from './Square';
 import { useState, useEffect } from 'react';
+import './styles/Board.css';
 
 const calculateWinner = (squares)=>{
     const lines = [
@@ -22,6 +23,7 @@ const calculateWinner = (squares)=>{
 
 
 const Board = ({player1, player2}) => {
+    console.log("Board rendered");
     const [squares, setSquares] = useState(Array(9).fill(null));
     const [xIsNext, setXIsNext] = useState(true);
     const [score1, setScore1] = useState(0);
@@ -37,15 +39,17 @@ const Board = ({player1, player2}) => {
     } else if (isDraw) {
         status = 'Draw!';
     } else {
-        status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+        status = 'Next player: ' + (xIsNext ? player1 : player2);
     }
 
     // Update scores when there's a winner
     useEffect(() => {
         if (winner === 'X') {
-            setScore1(score1 + 1);
+            // setScore1(score1 + 1);
+            setScore1(prev => prev + 1);
         } else if (winner === 'O') {
-            setScore2(score2 + 1);
+            // setScore2(score2 + 1);
+            setScore2(prev => prev + 1);
         }
     }, [winner]);
 

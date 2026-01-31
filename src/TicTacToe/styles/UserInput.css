@@ -1,0 +1,81 @@
+/* full screen center */
+.user-input-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f2933, #111827);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* card look */
+.setup-card {
+  background: #ffffff;
+  padding: 32px 36px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font: 20px 'Gill Sans';
+  font-weight: bold;
+}
+
+/* title */
+.setup-title {
+  margin-bottom: 20px;
+  color: hsla(33, 87%, 47%, 0.97);
+  font-size: 26px;
+  font-weight: 1000;
+  font-family: Futara;
+}
+
+/* input */
+.input-player-names {
+  width: 50%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font: 20px 'Gill Sans';
+  font-size: 15px;
+  outline: none;
+}
+
+.input-player-names:focus {
+  border-color: #2563eb;
+}
+
+/* button */
+.start-game-button {
+  width: 50%;
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.start-game-button:hover {
+  background: #1d4ed8;
+}
+
+/* 📱 Mobile responsiveness ONLY */
+@media (max-width: 480px) {
+  .setup-card {
+    width: 90%;
+    padding: 24px;
+  }
+
+  .input-player-names,
+  .start-game-button {
+    width: 100%;
+  }
+
+  .setup-title {
+    font-size: 22px;
+  }
+}

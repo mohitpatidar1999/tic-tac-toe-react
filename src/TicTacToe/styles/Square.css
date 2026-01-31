@@ -1,0 +1,46 @@
+.square {
+  width: 90px;
+  height: 90px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.square:hover {
+  background-color: #e3f2fd;
+  transform: scale(1.05);
+}
+
+.square h5 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.square.x h5 {
+  color: #1976d2;
+}
+
+.square.o h5 {
+  color: #d32f2f;
+}
+
+
+/* 📱 Mobile screens */
+@media (max-width: 480px) {
+  .square {
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+  }
+
+  .square h5 {
+    font-size: 28px;
+  }
+}

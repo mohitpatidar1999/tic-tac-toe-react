@@ -1,0 +1,94 @@
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f5f9ff, #e3f2fd);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: background 0.3s ease;
+}
+
+.status {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background-color: #e8f1fd;
+  color: #0d47a1;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.board-row {
+  display: flex;
+}
+
+.play-again-button {
+  margin: 10px 6px;
+  padding: 12px 22px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(25, 118, 210, 0.35);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.play-again-button:hover {
+  background: linear-gradient(135deg, #0d47a1, #08306b);
+  transform: translateY(-1px);
+}
+
+.score-board {
+  margin-top: 20px;
+  padding: 14px 22px;
+  border-radius: 14px;              /* more rounded */
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  width: 260px;
+  text-align: center;
+  border: 2px solid #90caf9;        /* subtle border */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+/* Dark mode */
+.dark .board-container {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+}
+
+.dark .status {
+  background-color: #1f2933;
+  color: #ffffff;
+}
+
+.dark .play-again-button {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  color: white;
+}
+
+.dark .score-board {
+  background: linear-gradient(135deg, #1f2933, #111827);
+  color: #ffffff;
+  border-color: #555;
+}
+
+/* 📱 Mobile screens */
+@media (max-width: 480px) {
+  .status {
+    font-size: 18px;
+  }
+
+  .play-again-button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .score-board {
+    width: 90%;
+  }
+}
